@@ -97,7 +97,7 @@ Start development server
 npm start
 ```
 
-Development server uses Demo app stored on `src/demo/index.tsx`. You have auto-reloading live preview of your development.
+Preview is available under `http://localhost:3000/` url. Development server uses Demo app stored on `src/demo/index.tsx`. You have auto-reloading live preview of your development.
 You also can use any of examples stored on sub-folders of `src/lib/examples/` folder.
 You'll find commented option how to preview `BasicExample` of each component on `src/demo/App.tsx` file.
 

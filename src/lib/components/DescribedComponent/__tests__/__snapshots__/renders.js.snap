@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DescribedComponent /> renders 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  placement="top"
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with custom hide delay 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  delayHide={3000}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  placement="top"
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with custom placement 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  placement="left"
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with custom style 1`] = `
+<OverlayTrigger
+  clasName="test className"
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  placement="top"
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with no description 1`] = `
+<span>
+  <p>
+    child
+  </p>
+</span>
+`;

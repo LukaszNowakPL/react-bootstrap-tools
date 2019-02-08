@@ -1,0 +1,11 @@
+.DescribedComponentAlternateStyle {
+  & > .tooltip-inner {
+    background-color: yellow;
+    color: black;
+  }
+
+  &.tooltip.top > .tooltip-arrow {
+    border-top-color: yellow !important;
+  }
+
+}
