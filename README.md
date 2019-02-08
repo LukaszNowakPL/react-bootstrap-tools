@@ -6,7 +6,7 @@
 [![NPM Version](https://img.shields.io/npm/v/react-bootstrap-tools.svg?style=flat-square)](https://www.npmjs.com/package/react-bootstrap-tools)
 [![Dependency Status](https://david-dm.org/yahoo/react-bootstrap.svg)](https://david-dm.org/yahoo/react-bootstrap)
 [![npm downloads](https://img.shields.io/npm/dm/react-bootstrap-tools.svg?style=flat-square)](https://www.npmjs.com/package/react-bootstrap-tools)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Greenkeeper badge](https://badges.greenkeeper.io/LukaszNowakPL/react-bootstrap-tools.svg)](https://greenkeeper.io/)
 
 React bootstrap tools are bundle of tools build on top of <a href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">react-bootstap</a> components. They are customisable components ready to use on any webpage.
 
