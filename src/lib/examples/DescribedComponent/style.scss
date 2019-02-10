@@ -4,8 +4,19 @@
     color: black;
   }
 
-  &.tooltip.top > .tooltip-arrow {
+  &.bs-tooltip-top .arrow::before {
     border-top-color: yellow !important;
   }
 
+  &.bs-tooltip-right .arrow::before {
+    border-right-color: yellow !important;
+  }
+
+  &.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: yellow !important;
+  }
+
+  &.bs-tooltip-left .arrow::before {
+    border-left-color: yellow !important;
+  }
 }

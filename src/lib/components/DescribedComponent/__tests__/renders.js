@@ -4,7 +4,7 @@ import DescribedComponent from "../index";
 
 describe("<DescribedComponent />", () => {
   const customComponentProps = {
-    description: 'test description'
+    description: "test description"
   };
 
   it("renders", () => {
@@ -18,25 +18,25 @@ describe("<DescribedComponent />", () => {
 
   it("renders with custom style", () => {
     const component = shallow(
-      <DescribedComponent {...customComponentProps} clasName='test className'>
+      <DescribedComponent {...customComponentProps} clasName="test className">
         <p>child</p>
       </DescribedComponent>
     );
     expect(component).toMatchSnapshot();
   });
 
-  it("renders with custom hide delay", () => {
+  it("renders with default show", () => {
     const component = shallow(
-      <DescribedComponent {...customComponentProps} delayHide={3000}>
+      <DescribedComponent {...customComponentProps} defaultShow={true}>
         <p>child</p>
       </DescribedComponent>
     );
     expect(component).toMatchSnapshot();
   });
 
-  it("renders with custom placement", () => {
+  it("renders with custom show/hide delay", () => {
     const component = shallow(
-      <DescribedComponent {...customComponentProps} placement='left'>
+      <DescribedComponent {...customComponentProps} delay={3000}>
         <p>child</p>
       </DescribedComponent>
     );
@@ -52,4 +52,21 @@ describe("<DescribedComponent />", () => {
     expect(component).toMatchSnapshot();
   });
 
+  it("renders with custom placement", () => {
+    const component = shallow(
+      <DescribedComponent {...customComponentProps} placement="left">
+        <p>child</p>
+      </DescribedComponent>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  it("renders with custom trigger", () => {
+    const component = shallow(
+      <DescribedComponent {...customComponentProps} trigger="hover">
+        <p>child</p>
+      </DescribedComponent>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

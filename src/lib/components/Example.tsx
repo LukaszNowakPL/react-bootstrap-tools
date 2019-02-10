@@ -1,5 +1,5 @@
-import * as React from 'react';
-import './Example.css';
+import * as React from "react";
+import "./Example.css";
 
 const Example = () => (
   <div className="Example">

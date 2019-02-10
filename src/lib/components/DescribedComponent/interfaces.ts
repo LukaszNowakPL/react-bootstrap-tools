@@ -1,24 +1,51 @@
 export interface DescribedComponentProps {
-    children: any;
-    description?: string;
-    className?: string;
-    placement?: 'top' | 'bottom' | 'left' | 'right';
-    delayHide?: number;
+  children: any;
+  description?: string;
+  className?: string;
+  placement?: PlacementValues;
+  delay?: number;
+  defaultShow?: boolean;
+  trigger?: TriggerValues;
 }
 
 export interface ConfigInterface {
-    defaultTooltipClassName: string;
-    defaultTooltipId: string;
-    defaultTooltipPlacement: 'top' | 'bottom' | 'left' | 'right';
+  defaultTooltipClassName: string;
+  defaultTooltipId: string;
+  defaultTooltipPlacement: PlacementValues;
 }
 
 export interface TooltipProps {
-    id: string;
-    className: string;
+  id: string;
+  className: string;
 }
 
 export interface OverlayTriggerProps {
-    placement: 'top' | 'bottom' | 'left' | 'right';
-    overlay: any;
-    delayHide?: number;
+  defaultShow?: boolean;
+  delay?: number;
+  overlay: any;
+  trigger?: TriggerValues;
+  placement?: PlacementValues;
 }
+
+type TriggerValues =
+  | "hover"
+  | "click"
+  | "focus"
+  | Array<"hover" | "click" | "focus">;
+
+type PlacementValues =
+  | "auto-start"
+  | "auto"
+  | "auto-end"
+  | "top-start"
+  | "top"
+  | "top-end"
+  | "right-start"
+  | "right"
+  | "right-end"
+  | "bottom-end"
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start";

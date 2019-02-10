@@ -1,35 +1,35 @@
-import * as React from "react"
-
+import * as React from "react";
 import config from "./config";
-import {DescribedComponentProps, OverlayTriggerProps, TooltipProps} from "./interfaces";
-import {getTooltipClassName} from "./functions";
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import {
+  DescribedComponentProps,
+  OverlayTriggerProps,
+  TooltipProps
+} from "./interfaces";
+import { getTooltipClassName } from "./functions";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const DescribedComponent = ({className, description, children, placement, ...otherProps}: DescribedComponentProps) => {
+const DescribedComponent = (props: DescribedComponentProps) => {
+  if (props.description) {
+    const {
+      children,
+      description,
+      className,
+      ...otherOverlayTriggerProps
+    } = props;
 
-  if (description) {
-      const tooltipProps: TooltipProps = {
-          id: config.defaultTooltipId,
-          className: getTooltipClassName(config.defaultTooltipClassName, className)
-      }
+    const tooltipProps: TooltipProps = {
+      id: config.defaultTooltipId,
+      className: getTooltipClassName(config.defaultTooltipClassName, className)
+    };
 
-      const tooltipComponent = (
-          <Tooltip {...tooltipProps}>{description}</Tooltip>
-      );
+    const overlayTriggerProps: OverlayTriggerProps = {
+      overlay: <Tooltip {...tooltipProps}>{description}</Tooltip>,
+      ...otherOverlayTriggerProps
+    };
 
-      const overlayTriggerProps:OverlayTriggerProps = {
-          ...otherProps,
-          placement: placement || config.defaultTooltipPlacement,
-          overlay: tooltipComponent,
-      }
-
-      return (
-          <OverlayTrigger {...overlayTriggerProps}>
-              {children}
-          </OverlayTrigger>
-      );
+    return <OverlayTrigger {...overlayTriggerProps}>{children}</OverlayTrigger>;
   }
-    return <span>{children}</span>;
+  return <span>{props.children}</span>;
 };
 
 export default DescribedComponent;

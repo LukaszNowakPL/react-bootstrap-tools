@@ -11,33 +11,6 @@ exports[`<DescribedComponent /> renders 1`] = `
       test description
     </ForwardRef(Bootstrap(Tooltip))>
   }
-  placement="top"
-  trigger={
-    Array [
-      "hover",
-      "focus",
-    ]
-  }
->
-  <p>
-    child
-  </p>
-</OverlayTrigger>
-`;
-
-exports[`<DescribedComponent /> renders with custom hide delay 1`] = `
-<OverlayTrigger
-  defaultOverlayShown={false}
-  delayHide={3000}
-  overlay={
-    <ForwardRef(Bootstrap(Tooltip))
-      className="Tooltip"
-      id="tooltip"
-    >
-      test description
-    </ForwardRef(Bootstrap(Tooltip))>
-  }
-  placement="top"
   trigger={
     Array [
       "hover",
@@ -76,6 +49,31 @@ exports[`<DescribedComponent /> renders with custom placement 1`] = `
 </OverlayTrigger>
 `;
 
+exports[`<DescribedComponent /> renders with custom show/hide delay 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  delay={3000}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
 exports[`<DescribedComponent /> renders with custom style 1`] = `
 <OverlayTrigger
   clasName="test className"
@@ -88,7 +86,50 @@ exports[`<DescribedComponent /> renders with custom style 1`] = `
       test description
     </ForwardRef(Bootstrap(Tooltip))>
   }
-  placement="top"
+  trigger={
+    Array [
+      "hover",
+      "focus",
+    ]
+  }
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with custom trigger 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
+  trigger="hover"
+>
+  <p>
+    child
+  </p>
+</OverlayTrigger>
+`;
+
+exports[`<DescribedComponent /> renders with default show 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  defaultShow={true}
+  overlay={
+    <ForwardRef(Bootstrap(Tooltip))
+      className="Tooltip"
+      id="tooltip"
+    >
+      test description
+    </ForwardRef(Bootstrap(Tooltip))>
+  }
   trigger={
     Array [
       "hover",

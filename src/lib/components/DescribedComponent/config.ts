@@ -1,6 +1,6 @@
-import {ConfigInterface} from "./interfaces";
+import { ConfigInterface } from "./interfaces";
 
-const config:ConfigInterface = {
+const config: ConfigInterface = {
   defaultTooltipClassName: "Tooltip",
   defaultTooltipId: "tooltip",
   defaultTooltipPlacement: "top"

@@ -3,8 +3,11 @@
  * @param defaultClassName
  * @param className - additional class name
  */
-export const getTooltipClassName  = (defaultClassName: string, className: string | undefined):string => {
-    if(className)
-        return defaultClassName + ' ' + className
-      return defaultClassName
-}
+export const getTooltipClassName = (
+  defaultClassName: string,
+  className: string | undefined
+): string => {
+  if (className) return defaultClassName + " " + className;
+
+  return defaultClassName;
+};
