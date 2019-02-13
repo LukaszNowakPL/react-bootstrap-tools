@@ -1,14 +1,69 @@
+import {
+  PlacementValues,
+  TriggerValues
+} from "../DescribedComponent/interfaces";
+
 export interface DescribedButtonProps {
-    description?: string;
-    buttonType?: string;
-    buttonName?: string;
+  name?: string;
+  type?: TypeValues;
+  active?: boolean;
+  block?: boolean;
+  disabled?: boolean;
+  href?: string;
+  hrefNewWindow?: boolean;
+  size?: SizeValues;
+  variant?: VariantValues;
+  buttonClassName?: string;
+  text?: string;
+  icon?: string;
+  iconClassName?: string;
+  onClick?: any;
+  onClickArg?: any;
+  id?: string;
+
+  description?: string;
+  className?: string;
+  placement?: PlacementValues;
+  delay?: number;
+  defaultShow?: boolean;
+  trigger?: TriggerValues;
 }
 
 export interface ButtonProps {
-    buttonType?:string,
-    buttonName?:string,
+  name?: string;
+  type?: TypeValues;
+  active?: boolean;
+  block?: boolean;
+  disabled?: boolean;
+  href?: string;
+  target?: "_blank";
+  size?: SizeValues;
+  variant?: VariantValues;
+  className?: string;
+  onClick?: any;
+  onClickArg?: any;
+  id?: string;
 }
 
-export interface Aaa {
-    description?: string,
-}
+type SizeValues = "sm" | "lg";
+
+type TypeValues = "button" | "reset" | "submit";
+
+type VariantValues =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | "info"
+  | "dark"
+  | "light"
+  | "link"
+  | "outline-primary"
+  | "outline-secondary"
+  | "outline-success"
+  | "outline-danger"
+  | "outline-warning"
+  | "outline-info"
+  | "outline-dark"
+  | "outline-light";

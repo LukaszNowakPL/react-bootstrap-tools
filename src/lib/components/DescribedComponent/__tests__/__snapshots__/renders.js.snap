@@ -24,7 +24,7 @@ exports[`<DescribedComponent /> renders 1`] = `
 </OverlayTrigger>
 `;
 
-exports[`<DescribedComponent /> renders with custom placement 1`] = `
+exports[`<DescribedComponent /> renders with custom position 1`] = `
 <OverlayTrigger
   defaultOverlayShown={false}
   overlay={
@@ -35,7 +35,7 @@ exports[`<DescribedComponent /> renders with custom placement 1`] = `
       test description
     </ForwardRef(Bootstrap(Tooltip))>
   }
-  placement="left"
+  placement="top"
   trigger={
     Array [
       "hover",
@@ -76,7 +76,6 @@ exports[`<DescribedComponent /> renders with custom show/hide delay 1`] = `
 
 exports[`<DescribedComponent /> renders with custom style 1`] = `
 <OverlayTrigger
-  clasName="test className"
   defaultOverlayShown={false}
   overlay={
     <ForwardRef(Bootstrap(Tooltip))

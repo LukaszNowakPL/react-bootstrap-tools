@@ -1,27 +1,54 @@
-import * as React from "react"
-import {DescribedButtonProps, ButtonProps, Aaa} from "./interfaces";
+import * as React from "react";
+import { ButtonProps, DescribedButtonProps } from "./interfaces";
 import DescribedComponent from "../DescribedComponent/index";
-import {DescribedComponentProps} from "../DescribedComponent/interfaces";
-import Button from "react-bootstrap/es/Button";
+import { DescribedComponentProps } from "../DescribedComponent/interfaces";
+import {
+  getButtonProps,
+  getDescribedComponentProps,
+  getGlyphiconProps
+} from "./functions";
+import { Button } from "react-bootstrap";
+import Glyphicon from "../Glyphicon";
+import { GlyphiconProps } from "../Glyphicon/interfaces";
 
-const DescribedButton = ({description, ...buttonProps}: DescribedButtonProps) => {
+const GlyphComponent = (props: DescribedButtonProps) => {
+  const glyphiconProps: GlyphiconProps = getGlyphiconProps(props);
+  return <Glyphicon {...glyphiconProps} />;
+};
 
-    // const {asdf, ...buttonProps}:{asdf:string, buttonProps:ButtonProps} = otherProps;
+const ButtonComponent = (props: DescribedButtonProps) => {
+  const buttonProps: ButtonProps = getButtonProps(props);
 
-    const buttonComponent = (<Button {...buttonProps}>aaa</Button>)
+  const { icon, text } = props;
 
-    if(description) {
+  const GlyphiconComponent = icon ? GlyphComponent(props) : null;
 
-        const describedComponentProps:DescribedComponentProps = {
-            children: null,
-            description,
-            ...buttonProps
-        };
+  return (
+    <Button {...buttonProps}>
+      {GlyphiconComponent}
+      {text}
+    </Button>
+  );
+};
 
-        return <DescribedComponent {...describedComponentProps}>{buttonComponent}</DescribedComponent>
-    }
+const DescribedButton = (props: DescribedButtonProps) => {
+  const { description } = props;
 
-    return buttonComponent
+  const buttonComponent = ButtonComponent(props);
+
+  if (description) {
+    const describedComponentProps: DescribedComponentProps = getDescribedComponentProps(
+      props
+    );
+
+    return (
+      <DescribedComponent {...describedComponentProps}>
+        {buttonComponent}
+      </DescribedComponent>
+    );
+  }
+
+  return buttonComponent;
 };
 
 export default DescribedButton;

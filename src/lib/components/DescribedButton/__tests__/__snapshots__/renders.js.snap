@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DescribedButton /> renders 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders as link opening on new window 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    href="testValue"
+    target="_blank"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with Tooltip show from beginning 1`] = `
+<DescribedComponent
+  defaultShow={true}
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom Tooltip className 1`] = `
+<DescribedComponent
+  className="testValue"
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom Tooltip delay 1`] = `
+<DescribedComponent
+  delay={3000}
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom Tooltip placement 1`] = `
+<DescribedComponent
+  description="test description"
+  placement="top"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom Tooltip trigger 1`] = `
+<DescribedComponent
+  description="test description"
+  trigger="hover"
+>
+  <ForwardRef(Bootstrap(Button)) />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom active state 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    active={true}
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom block 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    block={true}
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom button id 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    id="testValue"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom button name 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    name="testValue"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom button type 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    type="submit"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom className of an icon 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))>
+    <Glyphicon
+      className="testValue"
+      icon="testIcon"
+    />
+  </ForwardRef(Bootstrap(Button))>
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom className of button 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    className="testValue"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom disabled state 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    disabled={true}
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom icon 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))>
+    <Glyphicon
+      icon="testValue"
+    />
+  </ForwardRef(Bootstrap(Button))>
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom icon and text 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))>
+    <Glyphicon
+      icon="testIcon"
+    />
+    testText
+  </ForwardRef(Bootstrap(Button))>
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom onClick action with given argument 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    onClick={[Function]}
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom size 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    size="sm"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom text 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))>
+    testValue
+  </ForwardRef(Bootstrap(Button))>
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with custom variant 1`] = `
+<DescribedComponent
+  description="test description"
+>
+  <ForwardRef(Bootstrap(Button))
+    variant="secondary"
+  />
+</DescribedComponent>
+`;
+
+exports[`<DescribedButton /> renders with no description 1`] = `<ForwardRef(Bootstrap(Button)) />`;

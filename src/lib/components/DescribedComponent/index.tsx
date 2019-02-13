@@ -1,33 +1,29 @@
 import * as React from "react";
-import config from "./config";
 import {
   DescribedComponentProps,
   OverlayTriggerProps,
   TooltipProps
 } from "./interfaces";
-import { getTooltipClassName } from "./functions";
+import { getOverlayTriggerProps, getTooltipProps } from "./functions";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const DescribedComponent = (props: DescribedComponentProps) => {
-  if (props.description) {
-    const {
-      children,
-      description,
-      className,
-      ...otherOverlayTriggerProps
-    } = props;
+  const { children, description } = props;
 
-    const tooltipProps: TooltipProps = {
-      id: config.defaultTooltipId,
-      className: getTooltipClassName(config.defaultTooltipClassName, className)
-    };
+  if (description) {
+    const tooltipProps: TooltipProps = getTooltipProps(props);
 
-    const overlayTriggerProps: OverlayTriggerProps = {
-      overlay: <Tooltip {...tooltipProps}>{description}</Tooltip>,
-      ...otherOverlayTriggerProps
-    };
+    const overlayTriggerProps: OverlayTriggerProps = getOverlayTriggerProps(
+      props
+    );
 
-    return <OverlayTrigger {...overlayTriggerProps}>{children}</OverlayTrigger>;
+    const overlay = <Tooltip {...tooltipProps}>{description}</Tooltip>;
+
+    return (
+      <OverlayTrigger {...overlayTriggerProps} overlay={overlay}>
+        {children}
+      </OverlayTrigger>
+    );
   }
   return <span>{props.children}</span>;
 };

@@ -27,13 +27,13 @@ export interface OverlayTriggerProps {
   placement?: PlacementValues;
 }
 
-type TriggerValues =
+export type TriggerValues =
   | "hover"
   | "click"
   | "focus"
   | Array<"hover" | "click" | "focus">;
 
-type PlacementValues =
+export type PlacementValues =
   | "auto-start"
   | "auto"
   | "auto-end"

@@ -16,15 +16,6 @@ describe("<DescribedComponent />", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("renders with custom style", () => {
-    const component = shallow(
-      <DescribedComponent {...customComponentProps} clasName="test className">
-        <p>child</p>
-      </DescribedComponent>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
   it("renders with default show", () => {
     const component = shallow(
       <DescribedComponent {...customComponentProps} defaultShow={true}>
@@ -43,27 +34,36 @@ describe("<DescribedComponent />", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("renders with no description", () => {
-    const component = shallow(
-      <DescribedComponent>
-        <p>child</p>
-      </DescribedComponent>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  it("renders with custom placement", () => {
-    const component = shallow(
-      <DescribedComponent {...customComponentProps} placement="left">
-        <p>child</p>
-      </DescribedComponent>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
   it("renders with custom trigger", () => {
     const component = shallow(
       <DescribedComponent {...customComponentProps} trigger="hover">
+        <p>child</p>
+      </DescribedComponent>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  it("renders with custom position", () => {
+    const component = shallow(
+      <DescribedComponent {...customComponentProps} placement="top">
+        <p>child</p>
+      </DescribedComponent>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  it("renders with custom style", () => {
+    const component = shallow(
+      <DescribedComponent {...customComponentProps} clasName="test className">
+        <p>child</p>
+      </DescribedComponent>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  it("renders with no description", () => {
+    const component = shallow(
+      <DescribedComponent>
         <p>child</p>
       </DescribedComponent>
     );
