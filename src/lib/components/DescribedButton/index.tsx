@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PureComponent } from "react";
 import { ButtonProps, DescribedButtonProps } from "./interfaces";
 import DescribedComponent from "../DescribedComponent/index";
 import { DescribedComponentProps } from "../DescribedComponent/interfaces";
@@ -31,24 +32,26 @@ const ButtonComponent = (props: DescribedButtonProps) => {
   );
 };
 
-const DescribedButton = (props: DescribedButtonProps) => {
-  const { description } = props;
+class DescribedButton extends PureComponent<DescribedButtonProps> {
+  render() {
+    const { description } = this.props;
 
-  const buttonComponent = ButtonComponent(props);
+    const buttonComponent = ButtonComponent(this.props);
 
-  if (description) {
-    const describedComponentProps: DescribedComponentProps = getDescribedComponentProps(
-      props
-    );
+    if (description) {
+      const describedComponentProps: DescribedComponentProps = getDescribedComponentProps(
+        this.props
+      );
 
-    return (
-      <DescribedComponent {...describedComponentProps}>
-        {buttonComponent}
-      </DescribedComponent>
-    );
+      return (
+        <DescribedComponent {...describedComponentProps}>
+          {buttonComponent}
+        </DescribedComponent>
+      );
+    }
+
+    return buttonComponent;
   }
-
-  return buttonComponent;
-};
+}
 
 export default DescribedButton;

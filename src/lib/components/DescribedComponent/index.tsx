@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PureComponent } from "react";
 import {
   DescribedComponentProps,
   OverlayTriggerProps,
@@ -7,25 +8,27 @@ import {
 import { getOverlayTriggerProps, getTooltipProps } from "./functions";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const DescribedComponent = (props: DescribedComponentProps) => {
-  const { children, description } = props;
+class DescribedComponent extends PureComponent<DescribedComponentProps> {
+  render() {
+    const { children, description } = this.props;
 
-  if (description) {
-    const tooltipProps: TooltipProps = getTooltipProps(props);
+    if (description) {
+      const tooltipProps: TooltipProps = getTooltipProps(this.props);
 
-    const overlayTriggerProps: OverlayTriggerProps = getOverlayTriggerProps(
-      props
-    );
+      const overlayTriggerProps: OverlayTriggerProps = getOverlayTriggerProps(
+        this.props
+      );
 
-    const overlay = <Tooltip {...tooltipProps}>{description}</Tooltip>;
+      const overlay = <Tooltip {...tooltipProps}>{description}</Tooltip>;
 
-    return (
-      <OverlayTrigger {...overlayTriggerProps} overlay={overlay}>
-        {children}
-      </OverlayTrigger>
-    );
+      return (
+        <OverlayTrigger {...overlayTriggerProps} overlay={overlay}>
+          {children}
+        </OverlayTrigger>
+      );
+    }
+    return <span>{this.props.children}</span>;
   }
-  return <span>{props.children}</span>;
-};
+}
 
 export default DescribedComponent;
