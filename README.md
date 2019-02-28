@@ -4,8 +4,10 @@
 
 [![MIT](https://img.shields.io/npm/l/react-bootstrap-tools.svg?style=flat-square)](https://github.com/LukaszNowakPL/react-bootstrap-tools/blob/master/LICENSE)
 [![NPM Version](https://img.shields.io/npm/v/react-bootstrap-tools.svg?style=flat-square)](https://www.npmjs.com/package/react-bootstrap-tools)
-[![Dependency Status](https://david-dm.org/yahoo/react-bootstrap.svg)](https://david-dm.org/yahoo/react-bootstrap)
 [![npm downloads](https://img.shields.io/npm/dm/react-bootstrap-tools.svg?style=flat-square)](https://www.npmjs.com/package/react-bootstrap-tools)
+[![Build Status](https://travis-ci.org/LukaszNowakPL/react-bootstrap-tools.svg?branch=master)](https://travis-ci.org/LukaszNowakPL/react-bootstrap-tools)
+[![dependencies Status](https://david-dm.org/LukaszNowakPL/react-bootstrap-tools/status.svg)](https://david-dm.org/LukaszNowakPL/react-bootstrap-tools)
+[![devDependencies Status](https://david-dm.org/LukaszNowakPL/react-bootstrap-tools/dev-status.svg)](https://david-dm.org/LukaszNowakPL/react-bootstrap-tools?type=dev)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9037afb2f058f1ddb907/maintainability)](https://codeclimate.com/github/LukaszNowakPL/react-bootstrap-tools/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9037afb2f058f1ddb907/test_coverage)](https://codeclimate.com/github/LukaszNowakPL/react-bootstrap-tools/test_coverage)
@@ -13,9 +15,9 @@
 React bootstrap tools are bundle of tools build on top of [react-bootstap](https://github.com/react-bootstrap/react-bootstrap) components. They are customisable components ready to use on any webpage.
 
 Package contains:
-* `DescribedComponent` to describe given html element using Tooltip
-* `DescribedButton` to describe Button using Tooltip
-* `Glyphicon` to provide Material icon
+* [`DescribedComponent`](#describedcomponent) to describe given html element using Tooltip
+* [`DescribedButton`](#describedbutton) to describe Button using Tooltip
+* [`Glyphicon`](#glyhicon) to provide Material icon
 
 ## Installation
 
@@ -56,7 +58,7 @@ Check more info [here](https://google.github.io/material-design-icons/)
 
 ## Usage
 
-Workable examples are available on sub-folders of `src/lib/examples/` folder. You can import those examples directly to demo application ([see Development section](#Development) below).
+Workable examples are available on sub-folders of `src/lib/examples/` folder. You can import those examples directly to demo application ([see Development section](#development) below).
 
 ### DescribedComponent
 
@@ -83,7 +85,7 @@ export default SimplestExample;
 
 * string `description` : Description text to put inside `Tooltip` component
 * string `className` : Additional class name to custom your styling of a `Tooltip` component.
-Styling example for `NewStyle`: <pre>
+Styling example for `NewStyle`:<pre>
 .NewStyle > .tooltip-inner {
     background-color: yellow;
     color: black;
@@ -99,10 +101,9 @@ Styling example for `NewStyle`: <pre>
 }
 .NewStyle.bs-tooltip-left .arrow::before {
     border-left-color: yellow !important;
-}
-</pre>
-
-* string `placement` : Position of a `Tooltip` over component it describes. Available options:
+}</pre>
+* string `placement` : Position of a `Tooltip` over component it describes.<br />
+Available options:
     * auto-start
     * auto
     * auto-end
@@ -120,7 +121,7 @@ Styling example for `NewStyle`: <pre>
     * left-start
 * number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after describing component hover.
 * boolean `defaultShow` : Set `true` will initialise component with visible description
-* string `trigger` : Action necessary to take over component to initialise visibility of description.
+* string `trigger` : Action necessary to take over component to initialise visibility of description.<br />
 Available options:
     * hover
     * click
@@ -150,7 +151,9 @@ export default SimplestExample;
 
 * string `description` : Description text to put inside `Tooltip` component
 * string `text` : Text visible on button
-* string `icon` : Material icon id. If used together with `text` prop, icon will appear on the left hand side of text provided. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.
+* string `icon` : Material icon id. If used together with `text` prop, icon will appear on the left hand side of text provided. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.<br />
+Additional props connected with `icon` prop:
+    * string `iconClassName` : Additional class name to custom your styling of provided icon
 * string `className` : Additional class name to custom your styling of a `Tooltip` component.
 Styling example for `NewStyle` value:<pre>
 .NewStyle > .tooltip-inner {
@@ -170,9 +173,8 @@ Styling example for `NewStyle` value:<pre>
     border-left-color: yellow !important;
 }</pre>
 * string `buttonClassName` : Additional class name to custom your styling of button
-* string `iconClassName` : Additional class name to custom your styling of provided icon<br />
-**Note** prop available only with `icon` prop
-* string `placement` : Position of a `Tooltip` over button. Available options:
+* string `placement` : Position of a `Tooltip` over button.<br />
+Available options:
     * auto-start
     * auto
     * auto-end
@@ -190,7 +192,7 @@ Styling example for `NewStyle` value:<pre>
     * left-start
 * number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after button hover.
 * boolean `defaultShow` : Set `true` will initialise button with visible description
-* string `trigger` : Action necessary to take over button to initialise visibility of description.
+* string `trigger` : Action necessary to take over button to initialise visibility of description.<br />
 Available options:
     * hover
     * click
@@ -198,20 +200,23 @@ Available options:
     * Array<hover, click, focus>
 * string `id` : Id property of rendered button
 * string `name` : Name property of rendered button
-* string `type` : Type property of rendered button. Available options:
+* string `type` : Type property of rendered button.<br />
+Available options:
     * button
     * reset
     * submit
-* boolean `active` : Set `true` will show button in visual `active` mode (same as it was activated by hovering)
+* boolean `active` : Set `true` will show button in visual `active` mode (same as it was activated by trigger action)
 * boolean `block` : Set `true` will create block level buttons. It will span the full width of a parent
 * boolean `disabled` : Set `true` will disable the button. This way the `onClick` action will not initialise
-* string `href` : If on use, button will work as usual link directing to prop's url
-* boolean `hrefNewWindow` : Set `true` will open `href` url on new window<br />
-**Note** prop available only with `href` prop
-* string `size` : Bootstrap's size property of a button. Available options:
+* string `href` : If on use, button will work as usual link directing to prop's url<br />
+Additiona props connected with `href` prop:
+    * boolean `hrefNewWindow` : Set `true` will open `href` url on new window<br />
+* string `size` : Bootstrap's size property of a button.<br />
+Available options:
     * sm
     * lg
-* string `variant` : Bootstrap's variant property of a button. Available options: 
+* string `variant` : Bootstrap's variant property of a button.<br />
+Available options: 
     * primary
     * secondary
     * success
@@ -229,8 +234,9 @@ Available options:
     * outline-info
     * outline-dark
     * outline-light
-* callback `onClick` : Callback function taken during click on button. The callback will receive `event` object that initiated the call.<pre>const onClickCallback = event => { /*callback definition\*/ }</pre>
-* any `onClickArg` : If on use, `callback` function will additionally receive this prop's data.<br /><pre>const onClickCallback = (customArg, event) => { /\*callback definition\*/ }</pre>This option is vital for better performance in terms of avoiding the unnecessary re-render of a component.<br />**Note** prop available only with `onClick` prop 
+* callback `onClick` : Callback function taken during click on button. The callback will receive `event` object that initiated the call.<pre>const onClickCallback = event => { /*callback definition\*/ }</pre><br />
+Additional props connected with `onClick` prop:
+    * any `onClickArg` : If on use, `callback` function will additionally receive this prop's data.<br /><pre>const onClickCallback = (customArg, event) => { /\*callback definition\*/ }</pre>This option is vital for better performance in terms of avoiding the unnecessary re-render of a component.<br />**Note** prop available only with `onClick` prop 
 
 ### Glyphicon
 
@@ -294,7 +300,7 @@ Check hot reloading preview
 http://localhost:3000/
 ``` 
 
-Development server uses Demo app stored on `src/demo/index.tsx`. You can import there any of examples stored on sub-folders of `src/lib/examples/` folder.
+Development server uses Demo app stored on `src/demo/index.tsx`. You can import any of examples stored on sub-folders of `src/lib/examples/` folder.
 You'll find commented option how to preview `BasicExample` of each component on `src/demo/App.tsx` file.
 
 ### Folder structure
@@ -340,7 +346,7 @@ package.json
 }
 ```
 
-config/webpack.config.propd.js
+config/webpack.config.prod.js
 ```
 module.exports = {
     externals: {
