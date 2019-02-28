@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 (???)
+- AlertBox component
+- AlertBoxGroup component
+
 ## 0.2.2 (2019-02-28)
 - Travis configuration
 - Change to PureComponent

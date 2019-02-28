@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
-import { DescribedComponent, DescribedButton, Glyphicon } from "../lib";
 import "./style.scss";
+import AlertBoxCard from "./ComponentCards/AlertBox";
 import GlyphiconCard from "./ComponentCards/Glyphicon";
 import DescribedButtonCard from "./ComponentCards/DescribedButton";
 import DescribedComponentCard from "./ComponentCards/DescribedComponent";
@@ -14,7 +14,7 @@ export class App extends Component<{}, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      show: "DescribedButton"
+      show: "AlertBox"
     };
 
     this.componentNameButtonVariant = "outline-dark";
@@ -34,6 +34,10 @@ export class App extends Component<{}, AppState> {
 
   expandGlyphicon = () => {
     this.expandDescription("Glyphicon");
+  };
+
+  expandAlertBox = () => {
+    this.expandDescription("AlertBox");
   };
 
   render() {
@@ -80,6 +84,20 @@ export class App extends Component<{}, AppState> {
         <Collapse in={this.state.show === "Glyphicon"}>
           <div className="ComponentArea">
             <GlyphiconCard />
+          </div>
+        </Collapse>
+
+        <Button
+          onClick={this.expandAlertBox}
+          variant={this.componentNameButtonVariant}
+          className="ComponentName"
+          block
+        >
+          <h2>AlertBox</h2>
+        </Button>
+        <Collapse in={this.state.show === "AlertBox"}>
+          <div className="ComponentArea">
+            <AlertBoxCard />
           </div>
         </Collapse>
       </div>

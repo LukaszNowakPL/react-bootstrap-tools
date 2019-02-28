@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertBox /> renders 1`] = `
+<ForwardRef
+  variant="danger"
+/>
+`;
+
+exports[`<Glyphicon /> renders 1`] = `
+<i
+  className="material-icons"
+>
+  testIcon
+</i>
+`;
+
+exports[`<Glyphicon /> renders with provided className 1`] = `
+<i
+  className="material-icons testClassName"
+>
+  testIcon
+</i>
+`;

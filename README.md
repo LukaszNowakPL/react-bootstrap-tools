@@ -18,6 +18,8 @@ Package contains:
 * [`DescribedComponent`](#describedcomponent) to describe given html element using Tooltip
 * [`DescribedButton`](#describedbutton) to describe Button using Tooltip
 * [`Glyphicon`](#glyhicon) to provide Material icon
+* [`AlertBox`](#alertbox) to show visual info/alert box
+* [`AlertBoxGroup`](#alertboxgroup) to group AlertBox  components
 
 ## Installation
 
@@ -268,7 +270,34 @@ Styling example for `NewStyle` value:<pre>
 .NewStyle {
     background-color: yellow;
     color: red;
-}</pre>
+}</pre> 
+
+### AlertBox
+
+Description here
+
+![AlertBox example](readme_img/AlertBoxExample.png)
+
+#### Example of usage
+
+```
+import React from 'react';
+import { AlertBox } from 'react-bootstrap-tools';
+
+const SimplestExample = () => (
+    <AlertBox variant="danger" />
+);
+
+export default SimplestExample;
+```
+
+#### Available props
+
+* ToDo
+
+#### Available optional props
+
+* ToDo
 
 ## Contribution
 
