@@ -5,6 +5,7 @@
 - Change to PureComponent
 - Demo App presentation
 - Readme
+- Test env to node (faster Jest tests)
 
 ## 0.2.1 (2019-02-13)
 - Adding Glyphicon component

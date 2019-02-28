@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-tools",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Bundle of tools build on top of react-bootstrap components. They are customisable components ready to use on any webpage.",
   "keywords": [
     "react-bootstrap-tools",
@@ -12,8 +12,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "demo": "node scripts/demo.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "test-with-coverage": "node scripts/test.js --env=jsdom --coverage"
+    "test": "node scripts/test.js --env=node",
+    "test-with-coverage": "node scripts/test.js --env=node --coverage"
   },
   "repository": {
     "type": "git",
