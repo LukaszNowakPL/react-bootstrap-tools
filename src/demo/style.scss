@@ -1,3 +1,24 @@
+body {
+  margin: 0px auto;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.ComponentName {
+  border: 0 none;
+  text-align: left;
+}
+
+.ComponentArea {
+  margin: 10px auto;
+  border: 2px dashed gray;
+  border-radius: 10px;
+  padding: 3%;
+}
+
 .DescribedComponentCenterDiv {
   text-align: center;
 }
@@ -6,7 +27,7 @@
   text-align: center;
 }
 
-.componentArea {
+/*.componentArea {
   border: 2px dashed gray;
   padding: 15px 10px 5px;
-}
+}*/
