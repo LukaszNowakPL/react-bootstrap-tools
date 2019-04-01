@@ -4,8 +4,8 @@ import { AlertBox } from "../../../lib";
 const BasicExample = () => (
   <div>
     <h3>Basic example</h3>
-    <p>Some description.</p>
-    <AlertBox variant="danger" message="text message" />
+    <p>Simplest component with message.</p>
+    <AlertBox variant="info" message="Text message" />
   </div>
 );
 

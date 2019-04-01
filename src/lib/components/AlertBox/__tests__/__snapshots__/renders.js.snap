@@ -1,23 +1,251 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AlertBox /> renders 1`] = `
-<ForwardRef
-  variant="danger"
-/>
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+    >
+      test message
+    </Alert>
+  </div>
+</Fade>
 `;
 
-exports[`<Glyphicon /> renders 1`] = `
-<i
-  className="material-icons"
+exports[`<AlertBox /> renders closed (hidden) component 1`] = `
+<Fade
+  appear={false}
+  in={false}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
 >
-  testIcon
-</i>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      dismissible={true}
+      id="testId"
+      onClose={[Function]}
+      show={true}
+      transition={[Function]}
+    >
+      test message
+    </Alert>
+  </div>
+</Fade>
 `;
 
-exports[`<Glyphicon /> renders with provided className 1`] = `
-<i
-  className="material-icons testClassName"
+exports[`<AlertBox /> renders with Collapse transition 1`] = `
+<Collapse
+  appear={false}
+  dimension="height"
+  getDimensionValue={[Function]}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
 >
-  testIcon
-</i>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+    >
+      test message
+    </Alert>
+  </div>
+</Collapse>
+`;
+
+exports[`<AlertBox /> renders with badge component 1`] = `
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+    >
+      <Badge
+        className="AlertBox__badge"
+        pill={false}
+      >
+        4
+      </Badge>
+      test message
+    </Alert>
+  </div>
+</Fade>
+`;
+
+exports[`<AlertBox /> renders with close button and label 1`] = `
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="test label"
+      dismissible={true}
+      id="testId"
+      onClose={[Function]}
+      show={true}
+      transition={[Function]}
+    >
+      test message
+    </Alert>
+  </div>
+</Fade>
+`;
+
+exports[`<AlertBox /> renders with given className 1`] = `
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      className="testClass"
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+    >
+      test message
+    </Alert>
+  </div>
+</Fade>
+`;
+
+exports[`<AlertBox /> renders with given variant 1`] = `
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+      variant="warning"
+    >
+      test message
+    </Alert>
+  </div>
+</Fade>
+`;
+
+exports[`<AlertBox /> renders with icon component 1`] = `
+<Fade
+  appear={false}
+  in={true}
+  mountOnEnter={false}
+  onEnter={[Function]}
+  onEntered={[Function]}
+  onEntering={[Function]}
+  onExit={[Function]}
+  onExited={[Function]}
+  onExiting={[Function]}
+  timeout={300}
+  unmountOnExit={false}
+>
+  <div
+    className="AlertBox__wrapper"
+  >
+    <Alert
+      closeLabel="Close alert"
+      id="testId"
+      show={true}
+      transition={[Function]}
+    >
+      <Glyphicon
+        className="AlertBox__icon"
+        icon="testIcon"
+      />
+      test message
+    </Alert>
+  </div>
+</Fade>
 `;

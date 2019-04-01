@@ -9,6 +9,8 @@ import { getOverlayTriggerProps, getTooltipProps } from "./functions";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 class DescribedComponent extends PureComponent<DescribedComponentProps> {
+  displayName: string = "DescribedComponent";
+
   render() {
     const { children, description } = this.props;
 

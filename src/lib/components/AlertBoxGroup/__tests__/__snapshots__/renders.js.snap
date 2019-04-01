@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertBoxGroup /> renders 1`] = `
+<Fragment>
+  <AlertBox
+    id={1}
+    key="0"
+    message="info message"
+    variant="info"
+  />
+  <AlertBox
+    id={2}
+    key="1"
+    message="danger message"
+    variant="danger"
+  />
+</Fragment>
+`;
+
+exports[`<AlertBoxGroup /> renders grouped alerts 1`] = `
+<AlertBox
+  id={1}
+  key="1"
+  message="info message"
+  variant="info"
+  waitingItems={2}
+/>
+`;

@@ -15,11 +15,17 @@
 React bootstrap tools are bundle of tools build on top of [react-bootstap](https://github.com/react-bootstrap/react-bootstrap) components. They are customisable components ready to use on any webpage.
 
 Package contains:
-* [`DescribedComponent`](#describedcomponent) to describe given html element using Tooltip
-* [`DescribedButton`](#describedbutton) to describe Button using Tooltip
-* [`Glyphicon`](#glyhicon) to provide Material icon
-* [`AlertBox`](#alertbox) to show visual info/alert box
-* [`AlertBoxGroup`](#alertboxgroup) to group AlertBox  components
+
+- `DescribedComponent` to describe given html element using Tooltip
+- `DescribedButton` to describe Button using Tooltip
+- `Glyphicon` to provide Material icon
+- `AlertBox` to show small message box
+- `AlertBoxGroup` to group AlertBox components<br />
+  Available utilities connected with `AlertBoxGroup` component:
+  - `addAlert` for managing addition of an alert
+  - `dismissAlert` for managing dismissal of an alert
+
+For more info about each component please refer to it's `readme.md` file.
 
 ## Installation
 
@@ -29,7 +35,7 @@ Install dependency on your project
 npm install react-bootstrap-tools
 ```
 
-Import package to your component
+Import any package to your component
 
 ```
 import { DescribedComponent, DescrbedButton, Glyphicon } from "react-bootstrap-tools";
@@ -43,7 +49,18 @@ Use it directly on your component
 </DescribedComponent>
 ```
 
-React bootstrap tools does not ship with any particular styling.
+## Styling
+
+Import stylesheet into starting component of your application, or everywhere you import any element of React bootstrap tools package.
+Please refer to component's documentation to find out if it exposes any internal class name.
+
+```
+import "react-bootstrap-tools/build/static/css/index.css";
+```
+
+## Third party styling
+
+React bootstrap tools does not ship with any 3rd party styling.
 In order to provide Bootstap's default stylesheet attach it onto `head` section of your `html` document.
 Check more info [here](https://react-bootstrap.github.io/getting-started/introduction#stylesheets)
 
@@ -51,8 +68,13 @@ Check more info [here](https://react-bootstrap.github.io/getting-started/introdu
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 ```
 
-Also if you use `Glyphicon` component, in order to see graphical icons attach icons definition onto `head` section of your `html` document.
-Check more info [here](https://google.github.io/material-design-icons/)
+If you use any component consuming Material icon, especially:
+
+- `Glyphicon` component
+- `DescribedButton` with `icon` prop
+- `AlertBox` with `withIcon` prop
+
+In order to see graphical icons attach icons definition onto `head` section of your `html` document. Check more info [here](https://google.github.io/material-design-icons/)
 
 ```
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -85,50 +107,50 @@ export default SimplestExample;
 
 #### Available optional props
 
-* string `description` : Description text to put inside `Tooltip` component
-* string `className` : Additional class name to custom your styling of a `Tooltip` component.
-Styling example for `NewStyle`:<pre>
-.NewStyle > .tooltip-inner {
-    background-color: yellow;
-    color: black;
-}
-.NewStyle.bs-tooltip-top .arrow::before {
-    border-top-color: yellow !important;
-}
-.NewStyle.bs-tooltip-right .arrow::before {
-    border-right-color: yellow !important;
-}
-.NewStyle.bs-tooltip-bottom .arrow::before {
-    border-bottom-color: yellow !important;
-}
-.NewStyle.bs-tooltip-left .arrow::before {
-    border-left-color: yellow !important;
-}</pre>
-* string `placement` : Position of a `Tooltip` over component it describes.<br />
-Available options:
-    * auto-start
-    * auto
-    * auto-end
-    * top-start
-    * top
-    * top-end
-    * right-start
-    * right
-    * right-end
-    * bottom-end
-    * bottom
-    * bottom-start
-    * left-end
-    * left
-    * left-start
-* number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after describing component hover.
-* boolean `defaultShow` : Set `true` will initialise component with visible description
-* string `trigger` : Action necessary to take over component to initialise visibility of description.<br />
-Available options:
-    * hover
-    * click
-    * focus
-    * Array<hover, click, focus>
+- string `description` : Description text to put inside `Tooltip` component
+- string `className` : Additional class name to custom your styling of a `Tooltip` component.
+  Styling example for `NewStyle`:<pre>
+  .NewStyle > .tooltip-inner {
+  background-color: yellow;
+  color: black;
+  }
+  .NewStyle.bs-tooltip-top .arrow::before {
+  border-top-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-right .arrow::before {
+  border-right-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-left .arrow::before {
+  border-left-color: yellow !important;
+  }</pre>
+- string `placement` : Position of a `Tooltip` over component it describes.<br />
+  Available options:
+  - auto-start
+  - auto
+  - auto-end
+  - top-start
+  - top
+  - top-end
+  - right-start
+  - right
+  - right-end
+  - bottom-end
+  - bottom
+  - bottom-start
+  - left-end
+  - left
+  - left-start
+- number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after describing component hover.
+- boolean `defaultShow` : Set `true` will initialise component with visible description
+- string `trigger` : Action necessary to take over component to initialise visibility of description.<br />
+  Available options:
+  - hover
+  - click
+  - focus
+  - Array<hover, click, focus>
 
 ### DescribedButton
 
@@ -151,94 +173,94 @@ export default SimplestExample;
 
 #### Available optional props
 
-* string `description` : Description text to put inside `Tooltip` component
-* string `text` : Text visible on button
-* string `icon` : Material icon id. If used together with `text` prop, icon will appear on the left hand side of text provided. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.<br />
-Additional props connected with `icon` prop:
-    * string `iconClassName` : Additional class name to custom your styling of provided icon
-* string `className` : Additional class name to custom your styling of a `Tooltip` component.
-Styling example for `NewStyle` value:<pre>
-.NewStyle > .tooltip-inner {
-    background-color: yellow;
-    color: black;
-}
-.NewStyle.bs-tooltip-top .arrow::before {
-    border-top-color: yellow !important;
-}
-.NewStyle.bs-tooltip-right .arrow::before {
-    border-right-color: yellow !important;
-}
-.NewStyle.bs-tooltip-bottom .arrow::before {
-    border-bottom-color: yellow !important;
-}
-.NewStyle.bs-tooltip-left .arrow::before {
-    border-left-color: yellow !important;
-}</pre>
-* string `buttonClassName` : Additional class name to custom your styling of button
-* string `placement` : Position of a `Tooltip` over button.<br />
-Available options:
-    * auto-start
-    * auto
-    * auto-end
-    * top-start
-    * top
-    * top-end
-    * right-start
-    * right
-    * right-end
-    * bottom-end
-    * bottom
-    * bottom-start
-    * left-end
-    * left
-    * left-start
-* number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after button hover.
-* boolean `defaultShow` : Set `true` will initialise button with visible description
-* string `trigger` : Action necessary to take over button to initialise visibility of description.<br />
-Available options:
-    * hover
-    * click
-    * focus
-    * Array<hover, click, focus>
-* string `id` : Id property of rendered button
-* string `name` : Name property of rendered button
-* string `type` : Type property of rendered button.<br />
-Available options:
-    * button
-    * reset
-    * submit
-* boolean `active` : Set `true` will show button in visual `active` mode (same as it was activated by trigger action)
-* boolean `block` : Set `true` will create block level buttons. It will span the full width of a parent
-* boolean `disabled` : Set `true` will disable the button. This way the `onClick` action will not initialise
-* string `href` : If on use, button will work as usual link directing to prop's url<br />
-Additiona props connected with `href` prop:
-    * boolean `hrefNewWindow` : Set `true` will open `href` url on new window<br />
-* string `size` : Bootstrap's size property of a button.<br />
-Available options:
-    * sm
-    * lg
-* string `variant` : Bootstrap's variant property of a button.<br />
-Available options: 
-    * primary
-    * secondary
-    * success
-    * danger
-    * warning
-    * info
-    * dark
-    * light
-    * link
-    * outline-primary
-    * outline-secondary
-    * outline-success
-    * outline-danger
-    * outline-warning
-    * outline-info
-    * outline-dark
-    * outline-light
-* callback `onClick` : Callback function taken during click on button. The callback will receive `event` object that initiated the call.<pre>const onClickCallback = event => { /*callback definition\*/ }</pre><br />
-Additional props connected with `onClick` prop:
-    * any `onClickArg` : If on use, `callback` function will additionally receive this prop's data.<br /><pre>const onClickCallback = (customArg, event) => { /\*callback definition\*/ }</pre>This option is vital for better performance in terms of avoiding the unnecessary re-render of a component.<br />**Note** prop available only with `onClick` prop 
+- string `description` : Description text to put inside `Tooltip` component
+- string `text` : Text visible on button
+- string `icon` : Material icon id. If used together with `text` prop, icon will appear on the left hand side of text provided. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.<br />
+  Additional props connected with `icon` prop:
+  - string `iconClassName` : Additional class name to custom your styling of provided icon
+- string `className` : Additional class name to custom your styling of a `Tooltip` component.
+  Styling example for `NewStyle` value:<pre>
+  .NewStyle > .tooltip-inner {
+  background-color: yellow;
+  color: black;
+  }
+  .NewStyle.bs-tooltip-top .arrow::before {
+  border-top-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-right .arrow::before {
+  border-right-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: yellow !important;
+  }
+  .NewStyle.bs-tooltip-left .arrow::before {
+  border-left-color: yellow !important;
+  }</pre>
+- string `buttonClassName` : Additional class name to custom your styling of button
+- string `placement` : Position of a `Tooltip` over button.<br />
+  Available options:
+  - auto-start
+  - auto
+  - auto-end
+  - top-start
+  - top
+  - top-end
+  - right-start
+  - right
+  - right-end
+  - bottom-end
+  - bottom
+  - bottom-start
+  - left-end
+  - left
+  - left-start
+- number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after button hover.
+- boolean `defaultShow` : Set `true` will initialise button with visible description
+- string `trigger` : Action necessary to take over button to initialise visibility of description.<br />
+  Available options:
+  - hover
+  - click
+  - focus
+  - Array<hover, click, focus>
+- string `id` : Id property of rendered button
+- string `name` : Name property of rendered button
+- string `type` : Type property of rendered button.<br />
+  Available options:
+  - button
+  - reset
+  - submit
+- boolean `active` : Set `true` will show button in visual `active` mode (same as it was activated by trigger action)
+- boolean `block` : Set `true` will create block level buttons. It will span the full width of a parent
+- boolean `disabled` : Set `true` will disable the button. This way the `onClick` action will not initialise
+- string `href` : If on use, button will work as usual link directing to prop's url<br />
+  Additional props connected with `href` prop:
+  - boolean `hrefNewWindow` : Set `true` will open `href` url on new window<br />
+- string `size` : Bootstrap's size property of a button.<br />
+  Available options:
+  - sm
+  - lg
+- string `variant` : Bootstrap's variant property of a button.<br />
+  Available options:
+  - primary
+  - secondary
+  - success
+  - danger
+  - warning
+  - info
+  - dark
+  - light
+  - link
+  - outline-primary
+  - outline-secondary
+  - outline-success
+  - outline-danger
+  - outline-warning
+  - outline-info
+  - outline-dark
+  - outline-light
+- callback `onClick` : Callback function taken during click on button. The callback will receive `event` object that initiated the call.<pre>const onClickCallback = event => { /\*callback definition\*/ }</pre><br />
+  Additional props connected with `onClick` prop:
+  - any `onClickArg` : If on use, `callback` function will additionally receive this prop's data.<br /><pre>const onClickCallback = (customArg, event) => { /\*callback definition\*/ }</pre>This option is vital for better performance in terms of avoiding the unnecessary re-render of a component.<br />**Note** prop available only with `onClick` prop
 
 ### Glyphicon
 
@@ -261,43 +283,16 @@ export default SimplestExample;
 
 #### Available props
 
-* string `icon` Material icon id. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.
+- string `icon` Material icon id. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.
 
 #### Available optional props
 
-* string `className` Additional class name to custom your styling of an icon.
-Styling example for `NewStyle` value:<pre>
-.NewStyle {
-    background-color: yellow;
-    color: red;
-}</pre> 
-
-### AlertBox
-
-Description here
-
-![AlertBox example](readme_img/AlertBoxExample.png)
-
-#### Example of usage
-
-```
-import React from 'react';
-import { AlertBox } from 'react-bootstrap-tools';
-
-const SimplestExample = () => (
-    <AlertBox variant="danger" />
-);
-
-export default SimplestExample;
-```
-
-#### Available props
-
-* ToDo
-
-#### Available optional props
-
-* ToDo
+- string `className` Additional class name to custom your styling of an icon.
+  Styling example for `NewStyle` value:<pre>
+  .NewStyle {
+  background-color: yellow;
+  color: red;
+  }</pre>
 
 ## Contribution
 
@@ -307,9 +302,9 @@ Got ideas on how to make those components better? Open an issue under [on GitHub
 
 Clone repo
 
-````
+```
 git clone https://github.com/LukaszNowakPL/react-bootstrap-tools.git
-````
+```
 
 Install all dependencies
 
@@ -327,7 +322,7 @@ Check hot reloading preview
 
 ```
 http://localhost:3000/
-``` 
+```
 
 Development server uses Demo app stored on `src/demo/index.tsx`. You can import any of examples stored on sub-folders of `src/lib/examples/` folder.
 You'll find commented option how to preview `BasicExample` of each component on `src/demo/App.tsx` file.
@@ -339,19 +334,22 @@ Package is based on [create-react-library](https://github.com/DimiMikadze/create
 Live demo files are stored on `src/demo` folder. You can manipulate components and their props on `App.tsx` file.
 
 Developed components are stored on `src/lib/components` folder. Component's files should be encapsulated in one folder together:
-* `/__tests__` folder for automatic `Jest` tests of given component
-    * `__snapshots__` for storing snapshots created by `__tests__/renders.js` file
-    * `functions.test.js` for Unit tests of functions inside `functions.ts` file
-    * `integration.test.js` for integration tests of given component (cooperation with other components)
-    * `renders.js` for rendering snapshots of component on different states
-* `/gfx` folder for any images used by component
-* `config.ts` for configuration data of given component
-* `functions.ts` for logic functions
-* `index.tsx` for main component file
-* `interfaces.ts` for Type Script interfaces
-* `style.scss` for component's style sheet
 
-**Note**: Depending on component structure some files (i.e. `config.ts`, `functions.ts` or `__tests__/integration.test.js`) are not necessary on the package.
+- `/__tests__` folder for automatic `Jest` tests of given component
+  - `__image_snapshots__` for storing graphical snapshots created by `__tests__/iamges.js` file
+  - `__snapshots__` for storing snapshots created by `__tests__/renders.js` file
+  - `functions.js` for Unit tests of functions inside `functions.ts` file
+  - `images.js` for rendering graphical snapshots of component on different states
+  - `integration.js` for integration tests of given component (cooperation with other components)
+  - `renders.js` for rendering snapshots of component on different states
+- `/gfx` folder for any images used by component
+- `config.ts` for configuration data of given component
+- `functions.ts` for logic functions
+- `index.tsx` for main component file
+- `interfaces.ts` for Type Script interfaces
+- `style.scss` for component's style sheet
+
+**Note**: Depending on component structure some files (i.e. `config.ts`, `functions.ts` or `__tests__/integration.js`) are not necessary on the package.
 
 ### Examples
 
@@ -363,19 +361,21 @@ Example files are stored on sub-folders of `src/lib/examples` folder. Example co
 
 ### 3rd party packages
 
-If you attach any 3rd party package please mention it on `dependency` section of your `package.json` file
+If you attach any 3rd party package please mention it on `devDependencies` section of your `package.json` file
 as well as on `module.export.externals` of your `config/webpack.config.prod.js` file.
 
 package.json
+
 ```
 {
-  "dependencies": {
+  "devDependencies": {
     "react-bootstrap": "^1.0.0-beta.3"
   },
 }
 ```
 
 config/webpack.config.prod.js
+
 ```
 module.exports = {
     externals: {
@@ -396,7 +396,7 @@ Package consumes [Sass](http://sass-lang.com/) and [Jest](https://jestjs.io/) fr
 
 ### Testing
 
-To fire up `Jest` test 
+To fire up `Jest` test
 
 ```
 npm run test
@@ -407,7 +407,7 @@ To fire up `Jest` tests with included Coverage report (stored under `coverage/` 
 ```
 npm run test-with-coverage
 ```
- 
+
 ### Build library
 
 ```
@@ -425,5 +425,6 @@ npm publish
 ## Thanks
 
 To all authors of packages used to build this one and contributors. Special props goes to:
-* [create-react-library](https://github.com/DimiMikadze/create-react-library)
-* [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+
+- [create-react-library](https://github.com/DimiMikadze/create-react-library)
+- [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
