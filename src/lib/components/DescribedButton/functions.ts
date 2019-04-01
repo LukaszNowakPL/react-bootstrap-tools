@@ -24,7 +24,12 @@ export const getButtonProps = (props: DescribedButtonProps) => {
   if (props.id) buttonProps.id = props.id;
 
   if (props.onClick) {
-    if (props.onClickArg || props.onClickArg === false) {
+    if (
+      props.onClickArg ||
+      props.onClickArg === false ||
+      props.onClickArg === 0 ||
+      props.onClickArg === null
+    ) {
       buttonProps.onClick = ev => props.onClick(props.onClickArg, ev);
     } else {
       buttonProps.onClick = props.onClick;

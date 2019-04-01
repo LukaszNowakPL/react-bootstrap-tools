@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import DescribedButton, { ButtonComponent, GlyphComponent } from "../index";
+import DescribedButton from "../index";
 
 describe("<DescribedButton />", () => {
   const customComponentProps = {

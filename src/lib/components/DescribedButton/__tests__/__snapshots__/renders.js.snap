@@ -4,7 +4,12 @@ exports[`<DescribedButton /> renders 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -12,9 +17,13 @@ exports[`<DescribedButton /> renders as link opening on new window 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     href="testValue"
     target="_blank"
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -24,7 +33,12 @@ exports[`<DescribedButton /> renders with Tooltip show from beginning 1`] = `
   defaultShow={true}
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -33,7 +47,12 @@ exports[`<DescribedButton /> renders with custom Tooltip className 1`] = `
   className="testValue"
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -42,7 +61,12 @@ exports[`<DescribedButton /> renders with custom Tooltip delay 1`] = `
   delay={3000}
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -51,7 +75,12 @@ exports[`<DescribedButton /> renders with custom Tooltip placement 1`] = `
   description="test description"
   placement="top"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -60,7 +89,12 @@ exports[`<DescribedButton /> renders with custom Tooltip trigger 1`] = `
   description="test description"
   trigger="hover"
 >
-  <ForwardRef(Bootstrap(Button)) />
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  />
 </DescribedComponent>
 `;
 
@@ -68,8 +102,11 @@ exports[`<DescribedButton /> renders with custom active state 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
     active={true}
+    disabled={false}
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -78,8 +115,12 @@ exports[`<DescribedButton /> renders with custom block 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
     block={true}
+    disabled={false}
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -88,8 +129,12 @@ exports[`<DescribedButton /> renders with custom button id 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     id="testValue"
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -98,8 +143,12 @@ exports[`<DescribedButton /> renders with custom button name 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     name="testValue"
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -108,8 +157,11 @@ exports[`<DescribedButton /> renders with custom button type 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     type="submit"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -118,12 +170,17 @@ exports[`<DescribedButton /> renders with custom className of an icon 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))>
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  >
     <Glyphicon
       className="testValue"
       icon="testIcon"
     />
-  </ForwardRef(Bootstrap(Button))>
+  </Button>
 </DescribedComponent>
 `;
 
@@ -131,8 +188,12 @@ exports[`<DescribedButton /> renders with custom className of button 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
     className="testValue"
+    disabled={false}
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -141,8 +202,11 @@ exports[`<DescribedButton /> renders with custom disabled state 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
     disabled={true}
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -151,11 +215,16 @@ exports[`<DescribedButton /> renders with custom icon 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))>
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  >
     <Glyphicon
       icon="testValue"
     />
-  </ForwardRef(Bootstrap(Button))>
+  </Button>
 </DescribedComponent>
 `;
 
@@ -163,12 +232,17 @@ exports[`<DescribedButton /> renders with custom icon and text 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))>
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  >
     <Glyphicon
       icon="testIcon"
     />
     testText
-  </ForwardRef(Bootstrap(Button))>
+  </Button>
 </DescribedComponent>
 `;
 
@@ -176,8 +250,12 @@ exports[`<DescribedButton /> renders with custom onClick action with given argum
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     onClick={[Function]}
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -186,8 +264,12 @@ exports[`<DescribedButton /> renders with custom size 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
     size="sm"
+    type="button"
+    variant="primary"
   />
 </DescribedComponent>
 `;
@@ -196,9 +278,14 @@ exports[`<DescribedButton /> renders with custom text 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))>
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
+    variant="primary"
+  >
     testValue
-  </ForwardRef(Bootstrap(Button))>
+  </Button>
 </DescribedComponent>
 `;
 
@@ -206,10 +293,20 @@ exports[`<DescribedButton /> renders with custom variant 1`] = `
 <DescribedComponent
   description="test description"
 >
-  <ForwardRef(Bootstrap(Button))
+  <Button
+    active={false}
+    disabled={false}
+    type="button"
     variant="secondary"
   />
 </DescribedComponent>
 `;
 
-exports[`<DescribedButton /> renders with no description 1`] = `<ForwardRef(Bootstrap(Button)) />`;
+exports[`<DescribedButton /> renders with no description 1`] = `
+<Button
+  active={false}
+  disabled={false}
+  type="button"
+  variant="primary"
+/>
+`;

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="only-src-files" pattern="file[react-bootstrap-tools]:src//*" />
+</component>

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="only-first-node" pattern="file[react-bootstrap-tools]:*" />
+</component>
