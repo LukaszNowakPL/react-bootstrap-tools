@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 (2019-04-02)
+
+- AlertBox component
+- AlertBoxGroup component
+- Jest image tests
+
 ## 0.2.3 (2019-04-01)
 
 - IntelliJ .idea files

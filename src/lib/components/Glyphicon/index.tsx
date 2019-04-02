@@ -4,6 +4,8 @@ import { GlyphiconProps } from "./interfaces";
 import { getClassName } from "./functions";
 
 class Glyphicon extends PureComponent<GlyphiconProps> {
+  displayName: string = "Glyphicon";
+
   render() {
     const { icon, className } = this.props;
 

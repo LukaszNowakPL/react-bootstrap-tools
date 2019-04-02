@@ -4,9 +4,7 @@ import { Glyphicon } from "../../../lib";
 const BasicExample = () => (
   <div>
     <h3>Basic example</h3>
-    <p>
-      Hover the component to see description <code>Tooltip</code>.
-    </p>
+    <p>Just an icon</p>
     <Glyphicon icon="add" />
   </div>
 );

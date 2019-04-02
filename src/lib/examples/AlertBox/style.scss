@@ -1,0 +1,12 @@
+.AlertBoxAlternateStyle {
+  background-color: yellow;
+  color: blue;
+
+  &__icon {
+    color: green;
+  }
+}
+
+.AlertBox__badge {
+  background-color: black;
+}

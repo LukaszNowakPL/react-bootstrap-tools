@@ -33,6 +33,8 @@ const ButtonComponent = (props: DescribedButtonProps) => {
 };
 
 class DescribedButton extends PureComponent<DescribedButtonProps> {
+  displayName: string = "DescribedButton";
+
   render() {
     const { description } = this.props;
 
