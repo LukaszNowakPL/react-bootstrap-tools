@@ -25,8 +25,8 @@ class AlertBoxGroup extends PureComponent<AlertBoxGroupProps> {
 
     return (
       <React.Fragment>
-        {alerts.map((alert, idx) => (
-          <AlertBox key={idx} {...alert} />
+        {alerts.map(alert => (
+          <AlertBox key={alert.id} {...alert} />
         ))}
       </React.Fragment>
     );

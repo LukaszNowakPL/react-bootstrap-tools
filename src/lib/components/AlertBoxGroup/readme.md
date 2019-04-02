@@ -12,7 +12,7 @@ import { AlertBoxGroup } from 'react-bootstrap-tools';
 import "react-bootstrap-tools/build/static/css/index.css";
 
 const alerts = [{
-    variant: 'warning', message: 'warning message content'
+    id: '1', variant: 'warning', message: 'warning message content'
 }];
 
 const SimplestExample = () => (
@@ -81,7 +81,7 @@ const newAlerts = addAlert(alerts, alertToAdd);
 // Please note each alert has it's own unique id
 ```
 
-## Available props
+#### Available props
 
 - array `alerts` : Array of objects. They should be pass directly as `AlertBox` prop.
 It's important that each object will have a unique `id` prop. This will help you to identify object on after actions (i.e. `onExited` callback).
@@ -112,7 +112,7 @@ const emptyAlerts = dismissAlert(alerts, '1234');
 // now newAlerts is an empty array
 ```
 
-## Available props
+#### Available props
 
 - array `alerts` : Array of objects. They should be pass directly as `AlertBox` prop.
 It's important that each object will have a unique `id` prop. This will help you to identify object using `dismissAlert` utility.

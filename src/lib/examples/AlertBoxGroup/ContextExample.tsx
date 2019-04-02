@@ -136,7 +136,7 @@ class AddPanel extends React.PureComponent<any, any> {
               "dark",
               "light"
             ].map(variant => (
-              <option value={variant}>{variant}</option>
+              <option key={variant} value={variant}>{variant}</option>
             ))}
           </select>
         </p>

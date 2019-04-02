@@ -20,10 +20,6 @@ const actionAddAlert = (alert) => {
         type: 'ADD_ALERT',
         alert: {
             ...alert,
-            // After alert will collapse, just remove it from memory (reducer) as unneeded
-            onExited: actionDismissAlert,
-            // After close button is clicked, just remove the alert from memory
-            onClose: actionDismissAlert
         }
     };
 }
@@ -71,34 +67,32 @@ const GlobalStore = (props) => {
  */
 const GlobalView = (props) => {
 
-        const {alerts, actionAddAlert} = props;
+        const {alerts, actionAddAlert, actionDismissAlert} = props;
 
         return <section>
-            <AddPanel actionAddAlert={actionAddAlert} />
+            <AddPanel actionAddAlert={actionAddAlert} actionDismissAlert={actionDismissAlert} />
             <div><AlertBoxGroup alerts={alerts} /></div>
         </section>
 }
 
+// Extract some store data
+const mapStateToProps = state => ({
+    alerts: state.alerts,
+});
+
+// Collect actions taken on store's data
+const mapDispatchToProps = {
+    actionAddAlert,
+    actionDismissAlert
+};
+
 /**
  * This object takes parts of store and pass it to components as props.
  */
-const GlobalViewWrapper = () => {
-
-    // Extract some store data
-    const mapStateToProps = state => ({
-        alerts: state.alerts,
-    });
-
-    // Collect actions taken on store's data
-    const mapDispatchToProps = {
-        actionAddAlert
-    };
-
-    return connect(
-        mapStateToProps,
-        mapDispatchToProps
-    )(GlobalView)
-}
+const GlobalViewWrapper = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(GlobalView)
 
 /**
  * This component handles control panel for adding new AlertBoxes
@@ -121,16 +115,17 @@ class AddPanel extends React.PureComponent<any, any> {
     // Handles addition of an alert
     addAlert = () => {
         const {variant, message, hideAfter} = this.state;
+        const {actionAddAlert, actionDismissAlert} = this.props;
 
         // Use action to update global store values (using util under the hood)
-        this.props.actionAddAlert({
-            variant, message, hideAfter, withCollapse: true, dismissible: true
+        actionAddAlert({
+            variant, message, hideAfter, withCollapse: true, dismissible: true, onExited: actionDismissAlert, onClose: actionDismissAlert
         })
     }
 
     render() {
         return <div>
-            <p>Variant: <select name='variant' onChange={this.changeContent}>{["primary", "secondary", "success", "danger", "warning", "info", "dark", "light"].map(variant => <option value={variant}>{variant}</option>)}</select></p>
+            <p>Variant: <select name='variant' onChange={this.changeContent}>{["primary", "secondary", "success", "danger", "warning", "info", "dark", "light"].map(variant => <option key={variant} value={variant}>{variant}</option>)}</select></p>
             <p>Message: <input type='text' name='message' value={this.state.message} onChange={this.changeContent} /></p>
             <p>Hide after: <input type='text' name='hideAfter' value={this.state.hideAfter} onChange={this.changeContent} /> milliseconds</p>
             <p><button onClick={this.addAlert}>Add alert</button></p>
