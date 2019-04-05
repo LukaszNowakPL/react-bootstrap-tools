@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (2019-04-08)
+
+- Avatar component
+
 ## 0.3.1 (2019-04-02)
 
 - AlertBox component

@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> renders 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarIcon />
+</section>
+`;
+
+exports[`<Avatar /> renders provided icon 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarIcon
+    icon="testIcon"
+  />
+</section>
+`;
+
+exports[`<Avatar /> renders provided icon and icon's class name 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarIcon
+    icon="testIcon"
+    iconClassName="testIconClassName"
+  />
+</section>
+`;
+
+exports[`<Avatar /> renders provided src 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarImage
+    src="testSrc"
+  />
+</section>
+`;
+
+exports[`<Avatar /> renders provided src and image's class name 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarImage
+    imageClassName="testImageClassName"
+    src="testSrc"
+  />
+</section>
+`;
+
+exports[`<Avatar /> renders with no icon if src is provided 1`] = `
+<section
+  className="Avatar"
+>
+  <AvatarImage
+    icon="testIcon"
+    src="testSrc"
+  />
+</section>
+`;
+
+exports[`<Avatar /> renders with provided class name 1`] = `
+<section
+  className="Avatar testClassName"
+>
+  <AvatarIcon
+    className="testClassName"
+  />
+</section>
+`;
+
+exports[`<AvatarIcon /> renders 1`] = `
+<Glyphicon
+  className="Avatar__icon"
+  icon="person"
+/>
+`;
+
+exports[`<AvatarIcon /> renders with provided icon 1`] = `
+<Glyphicon
+  className="Avatar__icon"
+  icon="testIcon"
+/>
+`;
+
+exports[`<AvatarIcon /> renders with provided iconClassName 1`] = `
+<Glyphicon
+  className="Avatar__icon testIconClassName"
+  icon="person"
+/>
+`;
+
+exports[`<AvatarImage /> renders 1`] = `
+<Bootstrap(Image)
+  className="Avatar__image"
+  fluid={true}
+  src="testSrc"
+/>
+`;
+
+exports[`<AvatarImage /> renders with provided imageClassName 1`] = `
+<Bootstrap(Image)
+  className="Avatar__image testImageClassName"
+  fluid={true}
+  src="testSrc"
+/>
+`;

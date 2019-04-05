@@ -3,6 +3,7 @@ import DescribedButton from "./components/DescribedButton";
 import Glyphicon from "./components/Glyphicon";
 import AlertBox from "./components/AlertBox";
 import AlertBoxGroup from "./components/AlertBoxGroup";
+import Avatar from "./components/Avatar";
 import { addAlert, dismissAlert } from "./components/Utils";
 
 // Components
@@ -11,7 +12,8 @@ export {
   DescribedButton,
   Glyphicon,
   AlertBox,
-  AlertBoxGroup
+  AlertBoxGroup,
+  Avatar
 };
 
 // Utils

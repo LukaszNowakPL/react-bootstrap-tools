@@ -24,6 +24,7 @@ Package contains:
   Available utilities connected with `AlertBoxGroup` component:
   - `addAlert` for managing addition of an alert
   - `dismissAlert` for managing dismissal of an alert
+- `Avatar` to show user avatar
 
 For more info about each component please refer to it's `readme.md` file.
 
@@ -73,6 +74,7 @@ If you use any component consuming Material icon, especially:
 - `Glyphicon` component
 - `DescribedButton` with `icon` prop
 - `AlertBox` with `withIcon` prop
+- `Avatar` with no `src` prop
 
 In order to see graphical icons attach icons definition onto `head` section of your `html` document. Check more info [here](https://google.github.io/material-design-icons/)
 
