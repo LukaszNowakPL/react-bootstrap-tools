@@ -86,216 +86,6 @@ In order to see graphical icons attach icons definition onto `head` section of y
 
 Workable examples are available on sub-folders of `src/lib/examples/` folder. You can import those examples directly to demo application ([see Development section](#development) below).
 
-### DescribedComponent
-
-Wrapper for describing given html portion using Bootstrap's `Tooltip` component.
-
-![DescribedComponent example](readme_img/DescribedComponentExample.png)
-
-#### Example of usage
-
-```
-import React from 'react';
-import { DescribedComponent } from 'react-bootstrap-tools';
-
-const SimplestExample = () => (
-    <DescribedComponent description="description text">
-        <p>html element</p>
-    </DescribedComponent>
-);
-
-export default SimplestExample;
-```
-
-#### Available optional props
-
-- string `description` : Description text to put inside `Tooltip` component
-- string `className` : Additional class name to custom your styling of a `Tooltip` component.
-  Styling example for `NewStyle`:<pre>
-  .NewStyle > .tooltip-inner {
-  background-color: yellow;
-  color: black;
-  }
-  .NewStyle.bs-tooltip-top .arrow::before {
-  border-top-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-right .arrow::before {
-  border-right-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-bottom .arrow::before {
-  border-bottom-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-left .arrow::before {
-  border-left-color: yellow !important;
-  }</pre>
-- string `placement` : Position of a `Tooltip` over component it describes.<br />
-  Available options:
-  - auto-start
-  - auto
-  - auto-end
-  - top-start
-  - top
-  - top-end
-  - right-start
-  - right
-  - right-end
-  - bottom-end
-  - bottom
-  - bottom-start
-  - left-end
-  - left
-  - left-start
-- number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after describing component hover.
-- boolean `defaultShow` : Set `true` will initialise component with visible description
-- string `trigger` : Action necessary to take over component to initialise visibility of description.<br />
-  Available options:
-  - hover
-  - click
-  - focus
-  - Array<hover, click, focus>
-
-### DescribedButton
-
-Wrapper for describing Bootstrap's `Button` using `Tooltip` component. It also handles click actions, auto activation/disabling of button as well as simulates `href` link behaviour.
-
-![DescribedButton example](readme_img/DescribedButtonExample.png)
-
-#### Example of usage
-
-```
-import React from 'react';
-import { DescribedButton } from 'react-bootstrap-tools';
-
-const SimplestExample = () => (
-    <DescribedButton description="description text" text="button text" />
-);
-
-export default SimplestExample;
-```
-
-#### Available optional props
-
-- string `description` : Description text to put inside `Tooltip` component
-- string `text` : Text visible on button
-- string `icon` : Material icon id. If used together with `text` prop, icon will appear on the left hand side of text provided. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.<br />
-  Additional props connected with `icon` prop:
-  - string `iconClassName` : Additional class name to custom your styling of provided icon
-- string `className` : Additional class name to custom your styling of a `Tooltip` component.
-  Styling example for `NewStyle` value:<pre>
-  .NewStyle > .tooltip-inner {
-  background-color: yellow;
-  color: black;
-  }
-  .NewStyle.bs-tooltip-top .arrow::before {
-  border-top-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-right .arrow::before {
-  border-right-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-bottom .arrow::before {
-  border-bottom-color: yellow !important;
-  }
-  .NewStyle.bs-tooltip-left .arrow::before {
-  border-left-color: yellow !important;
-  }</pre>
-- string `buttonClassName` : Additional class name to custom your styling of button
-- string `placement` : Position of a `Tooltip` over button.<br />
-  Available options:
-  - auto-start
-  - auto
-  - auto-end
-  - top-start
-  - top
-  - top-end
-  - right-start
-  - right
-  - right-end
-  - bottom-end
-  - bottom
-  - bottom-start
-  - left-end
-  - left
-  - left-start
-- number `delay` : Number of milliseconds the `Tooltip` component will appear and hide after button hover.
-- boolean `defaultShow` : Set `true` will initialise button with visible description
-- string `trigger` : Action necessary to take over button to initialise visibility of description.<br />
-  Available options:
-  - hover
-  - click
-  - focus
-  - Array<hover, click, focus>
-- string `id` : Id property of rendered button
-- string `name` : Name property of rendered button
-- string `type` : Type property of rendered button.<br />
-  Available options:
-  - button
-  - reset
-  - submit
-- boolean `active` : Set `true` will show button in visual `active` mode (same as it was activated by trigger action)
-- boolean `block` : Set `true` will create block level buttons. It will span the full width of a parent
-- boolean `disabled` : Set `true` will disable the button. This way the `onClick` action will not initialise
-- string `href` : If on use, button will work as usual link directing to prop's url<br />
-  Additional props connected with `href` prop:
-  - boolean `hrefNewWindow` : Set `true` will open `href` url on new window<br />
-- string `size` : Bootstrap's size property of a button.<br />
-  Available options:
-  - sm
-  - lg
-- string `variant` : Bootstrap's variant property of a button.<br />
-  Available options:
-  - primary
-  - secondary
-  - success
-  - danger
-  - warning
-  - info
-  - dark
-  - light
-  - link
-  - outline-primary
-  - outline-secondary
-  - outline-success
-  - outline-danger
-  - outline-warning
-  - outline-info
-  - outline-dark
-  - outline-light
-- callback `onClick` : Callback function taken during click on button. The callback will receive `event` object that initiated the call.<pre>const onClickCallback = event => { /\*callback definition\*/ }</pre><br />
-  Additional props connected with `onClick` prop:
-  - any `onClickArg` : If on use, `callback` function will additionally receive this prop's data.<br /><pre>const onClickCallback = (customArg, event) => { /\*callback definition\*/ }</pre>This option is vital for better performance in terms of avoiding the unnecessary re-render of a component.<br />**Note** prop available only with `onClick` prop
-
-### Glyphicon
-
-Component for rendering [Material icon](https://material.io/tools/icons/?style=baseline).
-
-![Glyphicon example](readme_img/GlyphiconExample.png)
-
-#### Example of usage
-
-```
-import React from 'react';
-import { Glyphicon } from 'react-bootstrap-tools';
-
-const SimplestExample = () => (
-    <Glyphicon icon="add" />
-);
-
-export default SimplestExample;
-```
-
-#### Available props
-
-- string `icon` Material icon id. Click [here](https://material.io/tools/icons/?style=baseline) to check available icons library.
-
-#### Available optional props
-
-- string `className` Additional class name to custom your styling of an icon.
-  Styling example for `NewStyle` value:<pre>
-  .NewStyle {
-  background-color: yellow;
-  color: red;
-  }</pre>
-
 ## Contribution
 
 Got ideas on how to make those components better? Open an issue under [on GitHub bugtracker](https://github.com/LukaszNowakPL/react-bootstrap-tools/issues).
@@ -327,13 +117,13 @@ http://localhost:3000/
 ```
 
 Development server uses Demo app stored on `src/demo/index.tsx`. You can import any of examples stored on sub-folders of `src/lib/examples/` folder.
-You'll find commented option how to preview `BasicExample` of each component on `src/demo/App.tsx` file.
+You'll find commented option how to preview `BasicExample` of each component on component cards imported by `src/demo/App.tsx` file.
 
 ### Folder structure
 
 Package is based on [create-react-library](https://github.com/DimiMikadze/create-react-library) and implements it's concept of file structure.
 
-Live demo files are stored on `src/demo` folder. You can manipulate components and their props on `App.tsx` file.
+Live demo files are stored on `src/demo` folder. You can manipulate components and their props on component cards imported by `App.tsx` file.
 
 Developed components are stored on `src/lib/components` folder. Component's files should be encapsulated in one folder together:
 
@@ -349,6 +139,7 @@ Developed components are stored on `src/lib/components` folder. Component's file
 - `functions.ts` for logic functions
 - `index.tsx` for main component file
 - `interfaces.ts` for Type Script interfaces
+- `readme.md` for readme file
 - `style.scss` for component's style sheet
 
 **Note**: Depending on component structure some files (i.e. `config.ts`, `functions.ts` or `__tests__/integration.js`) are not necessary on the package.

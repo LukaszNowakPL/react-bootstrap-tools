@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 (2019-04-??)
+
+- Split readme.md to main and components
+
 ## 0.4.1 (2019-04-08)
 
 - Avatar component
