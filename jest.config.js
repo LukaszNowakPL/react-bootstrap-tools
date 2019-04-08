@@ -1,0 +1,58 @@
+var config = {
+    "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "!src/**/*.d.ts",
+        "!src/demo/**",
+        "!src/lib/examples/**",
+        "!src/lib/index.js",
+        "!src/setupTests.js",
+        "!src/mapCoverage.js",
+        "!src/**/__tests__/**/*.{js,jsx,ts,tsx}"
+    ],
+    "resolver": "jest-pnp-resolver",
+    "setupFiles": [
+        "react-app-polyfill/jsdom"
+    ],
+    "testMatch": [
+        "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+        "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+        "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+        "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+        "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+        "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+        "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+        "^react-native$": "react-native-web",
+        "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+        "web.js",
+        "js",
+        "web.ts",
+        "ts",
+        "web.tsx",
+        "tsx",
+        "json",
+        "web.jsx",
+        "jsx",
+        "node"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js",
+    "collectCoverage": false,
+    "coverageReporters": [
+        "json",
+        "lcov"
+    ]
+}
+
+module.exports = config

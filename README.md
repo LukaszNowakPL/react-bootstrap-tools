@@ -189,7 +189,7 @@ Package consumes [Sass](http://sass-lang.com/) and [Jest](https://jestjs.io/) fr
 
 ### Testing
 
-To fire up `Jest` test
+To fire up `Jest` test.
 
 ```
 npm run test
@@ -200,6 +200,24 @@ To fire up `Jest` tests with included Coverage report (stored under `coverage/` 
 ```
 npm run test-with-coverage
 ```
+
+To fire up `Jest` image test.
+
+```
+npm run image-test
+```
+
+This command will execute tests written on `images.js` files. They will generate image snapshot packs stored on `__tests__/__image_snapshots__`. As they use `jsdom` environment and download external css styles (ergo: are slow) it's recommended to generate pack of all possible examples and store it in one file per component.
+
+To fire up all test (node env + image)
+
+```
+npm run all-test
+```
+
+#### Code coverage
+
+Any change or addition of new functionality should be covered by at least one test. We expect that after `npm run test-with-coverage` coverage-report will show 100% code coverage.
 
 ### Build library
 

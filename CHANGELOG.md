@@ -3,6 +3,7 @@
 ## 0.4.2 (2019-04-??)
 
 - Split readme.md to main and components
+- Split Jest tests to node env and image tests
 
 ## 0.4.1 (2019-04-08)
 

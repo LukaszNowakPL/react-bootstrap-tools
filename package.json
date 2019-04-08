@@ -12,8 +12,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "demo": "node scripts/demo.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "test-with-coverage": "node scripts/test.js --env=jsdom --coverage"
+    "test": "node scripts/test.js -c jest.config.node.js --env=node",
+    "test-with-coverage": "npm run test -- --coverage",
+    "image-test": "node scripts/test.js -c jest.config.image.js --env=jsdom",
+    "all-test": "npm run test-with-coverage && npm run image-test"
   },
   "repository": {
     "type": "git",
