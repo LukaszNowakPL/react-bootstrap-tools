@@ -25,6 +25,7 @@ Package contains:
   - `addAlert` for managing addition of an alert
   - `dismissAlert` for managing dismissal of an alert
 - `Avatar` to show user avatar
+- `FormData` to show or allow to edit portion of textual data
 
 For more info about each component please refer to it's `readme.md` file.
 
@@ -75,6 +76,7 @@ If you use any component consuming Material icon, especially:
 - `DescribedButton` with `icon` prop
 - `AlertBox` with `withIcon` prop
 - `Avatar` with no `src` prop
+- `FormData` @ToDo:
 
 In order to see graphical icons attach icons definition onto `head` section of your `html` document. Check more info [here](https://google.github.io/material-design-icons/)
 

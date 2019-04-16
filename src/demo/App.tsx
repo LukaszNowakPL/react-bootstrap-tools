@@ -5,6 +5,7 @@ import "./style.scss";
 import AlertBoxCard from "./ComponentCards/AlertBox";
 import AlertBoxGroupCard from "./ComponentCards/AlertBoxGroup";
 import AvatarCard from "./ComponentCards/Avatar";
+import FormDataCard from "./ComponentCards/FormData";
 import GlyphiconCard from "./ComponentCards/Glyphicon";
 import DescribedButtonCard from "./ComponentCards/DescribedButton";
 import DescribedComponentCard from "./ComponentCards/DescribedComponent";
@@ -17,7 +18,7 @@ export class App extends Component<{}, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      show: "Avatar"
+      show: "FormData"
     };
 
     this.componentNameButtonVariant = "outline-dark";
@@ -49,6 +50,10 @@ export class App extends Component<{}, AppState> {
 
   expandAvatar = () => {
     this.expandDescription("Avatar");
+  };
+
+  expandFormData = () => {
+    this.expandDescription("FormData");
   };
 
   render() {
@@ -137,6 +142,20 @@ export class App extends Component<{}, AppState> {
         <Collapse in={this.state.show === "Avatar"}>
           <div className="ComponentArea">
             <AvatarCard />
+          </div>
+        </Collapse>
+
+        <Button
+          onClick={this.expandFormData}
+          variant={this.componentNameButtonVariant}
+          className="ComponentName"
+          block
+        >
+          <h2>FormData</h2>
+        </Button>
+        <Collapse in={this.state.show === "FormData"}>
+          <div className="ComponentArea">
+            <FormDataCard />
           </div>
         </Collapse>
       </div>

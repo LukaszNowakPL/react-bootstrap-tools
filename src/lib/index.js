@@ -4,6 +4,7 @@ import Glyphicon from "./components/Glyphicon";
 import AlertBox from "./components/AlertBox";
 import AlertBoxGroup from "./components/AlertBoxGroup";
 import Avatar from "./components/Avatar";
+import FormData from "./components/FormData";
 import { addAlert, dismissAlert } from "./components/Utils";
 
 // Components
@@ -13,7 +14,8 @@ export {
   Glyphicon,
   AlertBox,
   AlertBoxGroup,
-  Avatar
+  Avatar,
+  FormData
 };
 
 // Utils

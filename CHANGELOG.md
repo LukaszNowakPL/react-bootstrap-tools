@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 (2019-05-??)
+
+- FormData component
+
 ## 0.4.1 (2019-04-08)
 
 - Avatar component
