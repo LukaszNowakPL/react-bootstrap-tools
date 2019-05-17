@@ -1,0 +1,14 @@
+.FormData {
+  &__button {
+    background-color: inherit;
+    border: 0 none;
+    color: inherit;
+    transition: none;
+    padding: 0px;
+    cursor: pointer;
+  }
+
+  &__Icon {
+    font-size: 18px;
+  }
+}

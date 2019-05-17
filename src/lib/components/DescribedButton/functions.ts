@@ -22,6 +22,7 @@ export const getButtonProps = (props: DescribedButtonProps) => {
   if (props.variant) buttonProps.variant = props.variant;
   if (props.buttonClassName) buttonProps.className = props.buttonClassName;
   if (props.id) buttonProps.id = props.id;
+  if (props.bsPrefix) buttonProps.bsPrefix = props.bsPrefix;
 
   if (props.onClick) {
     if (

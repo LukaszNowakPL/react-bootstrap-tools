@@ -20,6 +20,7 @@ export interface DescribedButtonProps {
   onClick?: any;
   onClickArg?: any;
   id?: string;
+  bsPrefix?: string;
 
   description?: string;
   className?: string;
@@ -43,6 +44,7 @@ export interface ButtonProps {
   onClick?: any;
   onClickArg?: any;
   id?: string;
+  bsPrefix?: string;
 }
 
 type SizeValues = "sm" | "lg";
